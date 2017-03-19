@@ -1,5 +1,5 @@
 //Asa Kwarnmark
-//Giltiga personnummer är på formen 'ÅÅMMDDSSSS'. Det antas att personen med personnumret är under 100 år.
+//Giltiga personnummer är på formen 'ÅÅMMDDSSSS'. Det antas att personen med personnumret är yngre än 100 år.
 
 function birthday(ssn) {
     var month = getMonth(ssn);
