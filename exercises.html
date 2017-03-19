@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hej</title>
+</head>
+
+<body>
+
+<div id="hej"></div>
+
+<script>
+    function getNames(personArray) {
+        return personArray.map(function(x) { return x.name; });
+    }
+    
+    function startsWithA(name) {
+        return name.charAt(0) === "A";
+    }
+    
+    function startsWith(name, letter) {
+        return name.charAt(0).toUpperCase() === letter.toUpperCase();
+    }
+    
+    function namesStartingWithA(nameArray) {
+        return nameArray.filter(startsWithA);
+    }
+    
+    var names = getNames([ {name: "Adam", age: 34}, {name: "Bertil", age: 1890876} ]);
+    names.forEach(function(x) { document.getElementById("hej").innerHTML += x + " "; });
+    
+    document.getElementById("hej").innerHTML += "<br>" + startsWithA("Adam");
+    document.getElementById("hej").innerHTML += "<br>" + startsWith("Adam", "b");
+    var aNames = namesStartingWithA(["Adam", "b", "Tjosan", "Albert", "Ada", "Apa", "Christine", "Isa"]);
+    for(var i=0; i<aNames.length; i++) {
+        document.getElementById("hej").innerHTML += "<br>" + aNames[i];
+    }
+    </script>
+
+</body>
+</html>
